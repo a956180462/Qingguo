@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.xuexiang.xui.widget.edittext.materialedittext.MaterialEditText
+        android:id="@+id/register_edit_username"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="  用户名/邮箱"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15"
+        app:met_floatingLabel="normal"
+        app:met_singleLineEllipsis="false"
+        />
+
+    <com.xuexiang.xui.widget.edittext.materialedittext.MaterialEditText
+        android:id="@+id/register_edit_phone"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:hint="  手机号"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.27"
+        app:met_floatingLabel="normal"
+        app:met_singleLineEllipsis="false" />
+
+    <com.xuexiang.xui.widget.edittext.materialedittext.MaterialEditText
+        android:id="@+id/register_edit_password"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="  8-12位密码"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.39"
+        app:met_floatingLabel="normal"
+        app:met_isAsteriskStyle="true" />
+
+    <com.xuexiang.xui.widget.edittext.materialedittext.MaterialEditText
+        android:id="@+id/register_edit_phonephrase"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="  6位验证码"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.51"
+        app:met_floatingLabel="normal"
+        app:met_isAsteriskStyle="true" />
+
+    <com.xuexiang.xui.widget.button.ButtonView
+        android:id="@+id/register_button_register"
+        style="@style/ButtonView.Blue"
+        android:layout_width="125dp"
+        android:layout_height="45dp"
+        android:layout_margin="20dp"
+        android:text="注   册"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7" />
+
+    <Button
+        android:id="@+id/register_button_agreement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="0"
+        android:text="用户协议"
+        android:textColor="@color/xui_config_color_red"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.665"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <RadioButton
+        android:id="@+id/register_button_agree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我已阅读并同意"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.328"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <Button
+        android:id="@+id/register_edit_getphonephrase"
+        android:layout_width="100dp"
+        android:layout_height="36dp"
+        android:text="获取验证码"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.825"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.27" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
