@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent">
 
     <com.xuexiang.xui.widget.edittext.materialedittext.MaterialEditText
@@ -79,7 +80,7 @@
         android:id="@+id/register_button_agreement"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="0"
+        android:background="#00000000"
         android:text="用户协议"
         android:textColor="@color/xui_config_color_red"
         android:textStyle="normal"
