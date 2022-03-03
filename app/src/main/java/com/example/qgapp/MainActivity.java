@@ -1,7 +1,6 @@
 package com.example.qgapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -19,18 +18,19 @@ public class MainActivity extends AppCompatActivity {
         //判断是否登录
 
         checkloginstate check = new checkloginstate();
-        if(check.getloginstate()){
+        if(check.check()){
             Intent intent_na = new Intent(this, NavigationActivity.class);
             startActivity(intent_na);
         }else {
             Intent intent_login = new Intent(this, LoginActivity.class);
             startActivity(intent_login);
         }
-
-
-
-
+        ActivityDestroy.addDestroyActivityToMap(this,"MainActivity");
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
 
+    }
 }
