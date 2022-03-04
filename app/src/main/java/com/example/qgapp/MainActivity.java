@@ -3,7 +3,6 @@ package com.example.qgapp;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
-
 import com.example.qgapp.login.LoginActivity;
 import com.example.qgapp.login.checkloginstate;
 import com.example.qgapp.navigation.NavigationActivity;

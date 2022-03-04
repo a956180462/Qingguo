@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/part_navigation_bottomtab"
+    android:elevation="50dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <View
+        android:id="@+id/navigation_bottom_background"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@drawable/bg_bottom_navigation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/navigation_button_homepage"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/ic_homepage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/navigation_bottom_background"
+        app:layout_constraintVertical_bias="0.466"
+        />
+
+    <TextView
+        android:id="@+id/navigation_note_homepage"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:text="主页"
+        android:textSize="9sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/navigation_button_homepage"
+        app:layout_constraintStart_toStartOf="@+id/navigation_button_homepage"
+        app:layout_constraintTop_toBottomOf="@+id/navigation_button_homepage" />
+
+
+    <Button
+        android:id="@+id/navigation_button_guoyuan"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/ic_guoyuan_off"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/navigation_bottom_background"
+        app:layout_constraintVertical_bias="0.466"
+        />
+
+    <TextView
+        android:id="@+id/navigation_note_guoyuan"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:text="果园"
+        android:textSize="9sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/navigation_button_guoyuan"
+        app:layout_constraintStart_toStartOf="@+id/navigation_button_guoyuan"
+        app:layout_constraintTop_toBottomOf="@+id/navigation_button_guoyuan" />
+
+
+    <Button
+        android:id="@+id/navigation_button_person"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/ic_person_off"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.889"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/navigation_bottom_background"
+        app:layout_constraintVertical_bias="0.466"
+        />
+
+    <TextView
+        android:id="@+id/navigation_note_person"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:text="我"
+        android:textSize="9sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/navigation_button_person"
+        app:layout_constraintStart_toStartOf="@+id/navigation_button_person"
+        app:layout_constraintTop_toBottomOf="@+id/navigation_button_person" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
