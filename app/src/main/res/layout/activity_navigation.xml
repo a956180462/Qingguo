@@ -4,20 +4,26 @@
     android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <FrameLayout
         android:id="@+id/Fragment_navigation"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/navigation_bottomTab"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <include
-        android:id="@+id/navigation_bottomtab"
+        android:id="@+id/navigation_bottomTab"
         layout="@layout/view_navigation_bottomtab"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:elevation="50dp" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

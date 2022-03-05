@@ -19,5 +19,17 @@ public class userdate {
         Registerdate.phone = ph; Registerdate.phonephrase = phph;
     }
 
+
+    static class ResetPasswordDate{
+        static String username ;
+        static String password ;
+        static String phone ;
+        static String phonephrase ;
+    }
+    public static void setResetPasswordDate(String name, String pass, String ph, String phph) {
+        ResetPasswordDate.username = name; ResetPasswordDate.password = pass;
+        ResetPasswordDate.phone = ph; ResetPasswordDate.phonephrase = phph;
+    }
+
 }
 

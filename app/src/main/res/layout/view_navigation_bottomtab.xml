@@ -3,7 +3,7 @@
 
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/part_navigation_bottomtab"
+    android:id="@+id/part_navigation_bottomTab"
     android:elevation="50dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
