@@ -8,7 +8,7 @@
 
 
     <TextView
-        android:id="@+id/news_title_show1"
+        android:id="@+id/news_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingStart="10dp"
@@ -16,30 +16,33 @@
         android:textSize="35sp"
         android:textStyle="bold"
         android:paddingTop="8dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintStart_toEndOf="@+id/news_img"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.339" />
+        app:layout_constraintVertical_bias="0.339"
+        tools:ignore="RtlSymmetry" />
 
     <TextView
-        android:id="@+id/news_content_show1"
+        android:id="@+id/news_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingStart="10dp"
         android:text="@string/homepage_list_first_content_example"
         android:textSize="15sp"
         android:textStyle="normal"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/news_title_show1" />
+        app:layout_constraintStart_toEndOf="@+id/news_img"
+        app:layout_constraintTop_toBottomOf="@+id/news_title"
+        tools:ignore="RtlSymmetry" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/news_img"
         android:layout_width="100dp"
         android:layout_height="match_parent"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/example_news_image" />
+        app:srcCompat="@drawable/example_news_image"
+        tools:ignore="ContentDescription" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
