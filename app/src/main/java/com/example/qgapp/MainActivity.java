@@ -8,7 +8,7 @@ import com.example.qgapp.login.checkloginstate;
 import com.example.qgapp.navigation.NavigationActivity;
 
 
-public class MainActivity extends AppCompatActivity {
+public class  MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

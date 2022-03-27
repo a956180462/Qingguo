@@ -19,6 +19,7 @@ import com.xuexiang.xui.widget.button.ButtonView;
 import com.xuexiang.xui.widget.edittext.materialedittext.MaterialEditText;
 
 public class RegisterFragment extends Fragment {
+    //初始化用户协议未同意
     private static boolean agreestate = false;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
