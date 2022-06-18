@@ -6,21 +6,19 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class qgSQL{
-    String url = "jdbc:mysql://www.cnalzsy.top:3306/qg";
-    String name = "QG";
-    String pass = "XGYc245jSajprx5J";
+    String url = "不可见";
+    String name = "不可见";
+    String pass = "不可见";
     String SQL;
     qgSQL(String sql){
         SQL = sql;
     }
-    public long updateData() throws qgSqlException {
+    public long updateData() {
         long i = 0;
-        int error = 1;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-            error = 0;
+            e.printStackTrace(); 
         }
         try {
             Connection conn = DriverManager.getConnection(url, name, pass);
@@ -30,7 +28,6 @@ public class qgSQL{
             conn.close();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
-            error = -1;
         }
         return i;
     }
