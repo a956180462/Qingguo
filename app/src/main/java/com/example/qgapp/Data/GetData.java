@@ -1,4 +1,4 @@
-package com.example.qgapp.date;
+package com.example.qgapp.Data;
 
 import android.os.Bundle;
 import java.lang.String;
@@ -6,9 +6,9 @@ import com.example.qgapp.MyView.ViewNewsItem.NewsItem;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GetDate {
+public class GetData {
     String head;
-    public GetDate(Bundle args){
+    public GetData(Bundle args){
         head = args.getString("head");
     }
 

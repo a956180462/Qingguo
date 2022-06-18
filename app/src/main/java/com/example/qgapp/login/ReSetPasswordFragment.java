@@ -15,7 +15,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
 import com.example.qgapp.R;
-import com.example.qgapp.date.userdate;
 import com.xuexiang.xui.widget.button.ButtonView;
 import com.xuexiang.xui.widget.edittext.materialedittext.MaterialEditText;
 
@@ -57,7 +56,7 @@ public class ReSetPasswordFragment extends Fragment {
                 String pass =  password.getEditValue();
                 String ph =    phone.getEditValue();
                 String phph =  phonephrase.getEditValue();
-                sendResetPasswordDate(name,pass,ph,phph);
+
                 Toast.makeText(getActivity(),"修改成功",Toast.LENGTH_LONG).show();
                 g.onBackPressed();
         });
@@ -67,7 +66,5 @@ public class ReSetPasswordFragment extends Fragment {
 
     }
 
-    private void sendResetPasswordDate(String name, String pass, String ph, String phph) {
-        userdate.setResetPasswordDate(name,pass,ph,phph);
-    }
+
 }

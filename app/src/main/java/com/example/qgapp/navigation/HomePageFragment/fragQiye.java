@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.qgapp.MyView.ViewNewsItem.NewsAdapter;
 import com.example.qgapp.R;
-import com.example.qgapp.date.GetDate;
+import com.example.qgapp.Data.GetData;
 
 public class fragQiye extends Fragment {
     Activity activity;
@@ -32,9 +32,9 @@ public class fragQiye extends Fragment {
         Bundle args = new Bundle();
         args.putString("part","news");
         args.putString("head","企业");
-        GetDate getDate = new GetDate(args);
+        GetData getData = new GetData(args);
         RecyclerView recyclerView = activity.findViewById(R.id.Frag_home_qiye_Recycler);
-        NewsAdapter newsAdapter = new NewsAdapter(activity, getDate.getNewsDate());
+        NewsAdapter newsAdapter = new NewsAdapter(activity, getData.getNewsDate());
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(newsAdapter);
     }
