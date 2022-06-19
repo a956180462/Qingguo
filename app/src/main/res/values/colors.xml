@@ -11,4 +11,7 @@
     <color name="navigation_bottom_button_off">#FFA6A6A6</color>
     <color name="navigation_bottom_button_on">#FF91DE6A</color>
     <color name="readlist">#FFBB86FC</color>
+    <color name="orange">#DD400E</color>
+    <color name="green">#84E689</color>
+    <color name="pink">#DC1055</color>
 </resources>
