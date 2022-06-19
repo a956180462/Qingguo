@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.qgapp.MyView.ViewNewsItem.NewsAdapter;
 import com.example.qgapp.R;
-import com.example.qgapp.Data.GetData;
+import com.example.qgapp.Data.GetData_lakua;
 
 public class fragZhengfu extends Fragment {
     Activity activity;
@@ -32,9 +32,9 @@ public class fragZhengfu extends Fragment {
         Bundle args = new Bundle();
         args.putString("part","news");
         args.putString("head","政府");
-        GetData getData = new GetData(args);
+        GetData_lakua getDataLakua = new GetData_lakua(args);
         RecyclerView recyclerView = activity.findViewById(R.id.Frag_home_zhengfu_Recycler);
-        NewsAdapter newsAdapter = new NewsAdapter(activity, getData.getNewsDate());
+        NewsAdapter newsAdapter = new NewsAdapter(activity, getDataLakua.getNewsDate());
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(newsAdapter);
     }

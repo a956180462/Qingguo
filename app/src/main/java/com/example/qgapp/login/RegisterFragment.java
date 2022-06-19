@@ -13,7 +13,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
-import com.example.qgapp.Data.userData;
+import com.example.qgapp.Data.loginData;
 import com.example.qgapp.R;
 import com.xuexiang.xui.widget.button.ButtonView;
 import com.xuexiang.xui.widget.edittext.materialedittext.MaterialEditText;
@@ -81,8 +81,8 @@ public class RegisterFragment extends Fragment {
 
     }
     private void postRegisterData(String name,String pass,String ph,String phph){
-        userData.updateUsername(name);
-        userData.updateUserpass(pass);
+        loginData.updateUsername(name);
+        loginData.updateUserpass(pass);
     }
 
 }

@@ -6,7 +6,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.qgapp.Data.userData;
+import com.example.qgapp.Data.loginData;
 import com.example.qgapp.login.LoginActivity;
 import com.example.qgapp.navigation.NavigationActivity;
 
@@ -24,12 +24,18 @@ public class  MainActivity extends AppCompatActivity {
             public void run(){
                 //显示logo,模拟数据载入
                 try {
-                    sleep(4000);
+                    sleep(2000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+                try{
+                    Class.forName("com.example.qgapp.Data.MySQL.qgSQL");
+
+                } catch (ClassNotFoundException e) {
+                    System.out.println("fail");
+                }
                 //判断是否登录
-                if(userData.getLoginstate()){
+                if(loginData.getLoginstate()){
                     Intent intent_na = new Intent(activity, NavigationActivity.class);
                     startActivity(intent_na);
                 }else {

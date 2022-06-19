@@ -26,6 +26,8 @@ public class NavigationActivity extends FragmentActivity {
         loginTransaction.add(R.id.Fragment_in_navigation,new HomePageFragment());
         loginTransaction.commit();
 
+
+
     }
 
 

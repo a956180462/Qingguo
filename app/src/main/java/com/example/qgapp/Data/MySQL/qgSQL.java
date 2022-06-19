@@ -1,41 +1,38 @@
 package com.example.qgapp.Data.MySQL;
 
+import androidx.annotation.NonNull;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
 public class qgSQL{
-    String url = "jdbc:mysql://www.cnalzsy.top:3306/qg";
-    String name = "QG";
-    String pass = "XGYc245jSajprx5J";
-    String SQL;
-    qgSQL(String sql){
-        SQL = sql;
-    }
-    public long updateData() throws qgSqlException {
-        long i = 0;
-        int error = 1;
+    static String url = "jdbc:mysql://www.cnalzsy.top:3306/qg";
+    static String name = "QG";
+    static String pass = "XGYc245jSajprx5J";
+    static Connection connection;
+    static {
+        //Create a Connection object
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-            error = 0;
+            new qgSqlException("DriverException").DriverException();
         }
         try {
-            Connection conn = DriverManager.getConnection(url, name, pass);
-            Statement statement = conn.createStatement();
-            i = statement.executeUpdate(SQL);
-            statement.close();
-            conn.close();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-            error = -1;
+            connection = DriverManager.getConnection(url, name, pass);
+        } catch (SQLException e) {
+            new qgSqlException(e.getMessage()).ConnException();
         }
-        return i;
     }
 
-
+    public void CloseConn(@NonNull Connection conn) {
+        try {
+            conn.close();
+        } catch (SQLException e) {
+            new qgSqlException(e.getMessage()).CloseException();
+        }
+    }
 
 
 

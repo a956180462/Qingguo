@@ -6,9 +6,9 @@ import com.example.qgapp.MyView.ViewNewsItem.NewsItem;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GetData {
+public class GetData_lakua {
     String head;
-    public GetData(Bundle args){
+    public GetData_lakua(Bundle args){
         head = args.getString("head");
     }
 

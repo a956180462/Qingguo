@@ -1,7 +1,7 @@
 package com.example.qgapp.Data;
 
 
-public class userData {
+public class loginData {
     private static boolean loginstate = false;
     private static String  username = "";
     private static String  userpass = "";

@@ -11,7 +11,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.qgapp.ActivityDestroy;
 import com.example.qgapp.R;
-import com.example.qgapp.Data.userData;
+import com.example.qgapp.Data.loginData;
 import com.example.qgapp.navigation.NavigationActivity;
 import com.xuexiang.xui.widget.button.ButtonView;
 import com.xuexiang.xui.widget.edittext.materialedittext.MaterialEditText;
@@ -72,9 +72,9 @@ public class LoginActivity extends AppCompatActivity {
 
     //保存登录状态
     public void createLogindate(String username,String password){
-        userData.updateUsername(username);
-        userData.updateUserpass(password);
-        userData.updateLoginstate(true);
+        loginData.updateUsername(username);
+        loginData.updateUserpass(password);
+        loginData.updateLoginstate(true);
     }
 
 }
