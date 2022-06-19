@@ -1,5 +1,4 @@
-package com.example.qgapp.navigation.GuoYuan;
-
+package com.example.qgapp.navigation.PersonFragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,12 +8,13 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
 import com.example.qgapp.R;
 
-public class GuoYuanFragment extends Fragment {
+public class PersonFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_guoyuan,container,false);
+        return inflater.inflate(R.layout.fragment_person,container,false);
     }
 }
