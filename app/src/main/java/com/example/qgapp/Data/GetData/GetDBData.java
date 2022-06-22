@@ -10,7 +10,7 @@ public interface GetDBData {
 
 
      */
-    ResultSet loginData_DB(String UserID);
+    ResultSet loginData_DB(String UserKey,String pass);
     ResultSet userData_DB();
     ResultSet newsData_DB();
 

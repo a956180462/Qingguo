@@ -1,7 +1,8 @@
 package com.example.qgapp.Data.GetData;
 
 import java.io.File;
+import java.util.List;
 
 public interface GetFileData {
-    File loginData_File();
+    List<String> loginData_File();
 }
