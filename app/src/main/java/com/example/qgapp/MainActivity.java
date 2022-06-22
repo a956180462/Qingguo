@@ -1,13 +1,13 @@
 package com.example.qgapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.qgapp.Common.OnBoarding;
 import com.example.qgapp.Data.UserData.loginData;
-import com.example.qgapp.login.LoginActivity;
 import com.example.qgapp.navigation.NavigationActivity;
 
 
@@ -21,7 +21,7 @@ public class  MainActivity extends AppCompatActivity {
             public void run(){
                 //显示logo,模拟数据载入
                 try {
-                    sleep(2000);
+                    sleep(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -34,16 +34,20 @@ public class  MainActivity extends AppCompatActivity {
                 if(loginData.getLoginstate()){
                     Intent intent_na = new Intent(activity, NavigationActivity.class);
                     startActivity(intent_na);
+
                 }else {
-                    Intent intent_login = new Intent(activity, LoginActivity.class);
+                    Intent intent_login = new Intent(activity, OnBoarding.class);
                     startActivity(intent_login);
+
                 }
+                activity.finish();
             }
         };
         setContentView(R.layout.activity_main);
         begin.start();
 
-        ActivityDestroy.addDestroyActivityToMap(this,"MainActivity");
+
     }
 
 }
+
