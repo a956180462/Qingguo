@@ -11,7 +11,8 @@ public class qgSQL{
     static String url = "jdbc:mysql://www.cnalzsy.top:3306/qg";
     static String name = "QG";
     static String pass = "XGYc245jSajprx5J";
-    static Connection connection;
+    public static Connection connection;
+    public static Statement statement;
     static {
         //Create a Connection object
         try {
@@ -21,14 +22,15 @@ public class qgSQL{
         }
         try {
             connection = DriverManager.getConnection(url, name, pass);
+            statement = connection.createStatement();
         } catch (SQLException e) {
             new qgSqlException(e.getMessage()).ConnException();
         }
     }
 
-    public void CloseConn(@NonNull Connection conn) {
+    public void CloseConn() {
         try {
-            conn.close();
+            connection.close();
         } catch (SQLException e) {
             new qgSqlException(e.getMessage()).CloseException();
         }

@@ -6,7 +6,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.qgapp.Data.loginData;
+import com.example.qgapp.Data.UserData.loginData;
 import com.example.qgapp.login.LoginActivity;
 import com.example.qgapp.navigation.NavigationActivity;
 
@@ -16,9 +16,6 @@ public class  MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        int a = 100;
-        int b = 200;
-        int c = a+b;
         Activity activity = this;
         Thread begin = new Thread(){
             public void run(){
@@ -30,7 +27,6 @@ public class  MainActivity extends AppCompatActivity {
                 }
                 try{
                     Class.forName("com.example.qgapp.Data.MySQL.qgSQL");
-
                 } catch (ClassNotFoundException e) {
                     System.out.println("fail");
                 }

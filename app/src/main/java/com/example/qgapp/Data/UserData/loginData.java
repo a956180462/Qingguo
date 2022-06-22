@@ -1,7 +1,7 @@
-package com.example.qgapp.Data;
+package com.example.qgapp.Data.UserData;
 
 
-public class loginData {
+public class loginData extends UserData{
     private static boolean loginstate = false;
     private static String  username = "";
     private static String  userpass = "";

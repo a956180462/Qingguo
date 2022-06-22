@@ -30,6 +30,7 @@
         <entry key="..\:/AndroidProject/QgApp/app/src/main/res/layout/fragment_guoyuan.xml" value="0.24322916666666666" />
         <entry key="..\:/AndroidProject/QgApp/app/src/main/res/layout/fragment_homepage.xml" value="0.25" />
         <entry key="..\:/AndroidProject/QgApp/app/src/main/res/layout/fragment_login.xml" value="0.31145833333333334" />
+        <entry key="..\:/AndroidProject/QgApp/app/src/main/res/layout/fragment_person.xml" value="0.17447916666666666" />
         <entry key="..\:/AndroidProject/QgApp/app/src/main/res/layout/fragment_register.xml" value="0.25" />
         <entry key="..\:/AndroidProject/QgApp/app/src/main/res/layout/fragment_resetpassword.xml" value="0.25" />
         <entry key="..\:/AndroidProject/QgApp/app/src/main/res/layout/navigation.xml" value="0.25" />
@@ -41,31 +42,6 @@
         <entry key="..\:/AndroidProject/QgApp/app/src/main/res/layout/view_newslist.xml" value="0.3541666666666667" />
         <entry key="..\:/AndroidProject/QgApp/app/src/main/res/layout/view_show_news.xml" value="0.33" />
         <entry key="..\:/AndroidProject/QgApp/app/src/main/res/layout/view_titletab.xml" value="0.3541666666666667" />
-        <entry key="..\:/Codefield/AndroidStudio/Qingguo/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
-        <entry key="..\:/Codefield/AndroidStudio/Qingguo/app/src/main/res/drawable/example_news_image.xml" value="0.1" />
-        <entry key="..\:/Codefield/AndroidStudio/Qingguo/app/src/main/res/drawable/ic_baseline_keyboard_arrow_down_24.xml" value="0.1775" />
-        <entry key="..\:/Codefield/AndroidStudio/Qingguo/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.1775" />
-        <entry key="..\:/Codefield/AndroidStudio/Qingguo/app/src/main/res/drawable/ic_baseline_sort_24.xml" value="0.1775" />
-        <entry key="..\:/Codefield/AndroidStudio/Qingguo/app/src/main/res/drawable/ic_guoyuan.xml" value="0.1" />
-        <entry key="..\:/Codefield/AndroidStudio/Qingguo/app/src/main/res/drawable/ic_guoyuan_off.xml" value="0.1" />
-        <entry key="..\:/Codefield/AndroidStudio/Qingguo/app/src/main/res/drawable/ic_homepage.xml" value="0.1" />
-        <entry key="..\:/Codefield/AndroidStudio/Qingguo/app/src/main/res/drawable/ic_homepage_off.xml" value="0.1" />
-        <entry key="..\:/Codefield/AndroidStudio/Qingguo/app/src/main/res/drawable/ic_icon_logo.xml" value="0.1" />
-        <entry key="..\:/Codefield/AndroidStudio/Qingguo/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
-        <entry key="..\:/Codefield/AndroidStudio/Qingguo/app/src/main/res/drawable/ic_person.xml" value="0.1" />
-        <entry key="..\:/Codefield/AndroidStudio/Qingguo/app/src/main/res/layout/activity_login.xml" value="0.25885416666666666" />
-        <entry key="..\:/Codefield/AndroidStudio/Qingguo/app/src/main/res/layout/activity_main.xml" value="0.25885416666666666" />
-        <entry key="..\:/Codefield/AndroidStudio/Qingguo/app/src/main/res/layout/activity_navigation.xml" value="0.20430107526881722" />
-        <entry key="..\:/Codefield/AndroidStudio/Qingguo/app/src/main/res/layout/frag_home_qiye.xml" value="0.1" />
-        <entry key="..\:/Codefield/AndroidStudio/Qingguo/app/src/main/res/layout/frag_home_zhengfu.xml" value="0.23489583333333333" />
-        <entry key="..\:/Codefield/AndroidStudio/Qingguo/app/src/main/res/layout/fragment_guoyuan.xml" value="0.2361111111111111" />
-        <entry key="..\:/Codefield/AndroidStudio/Qingguo/app/src/main/res/layout/fragment_homepage.xml" value="0.23489583333333333" />
-        <entry key="..\:/Codefield/AndroidStudio/Qingguo/app/src/main/res/layout/fragment_person.xml" value="0.25885416666666666" />
-        <entry key="..\:/Codefield/AndroidStudio/Qingguo/app/src/main/res/layout/fragment_register.xml" value="0.25885416666666666" />
-        <entry key="..\:/Codefield/AndroidStudio/Qingguo/app/src/main/res/layout/fragment_resetpassword.xml" value="0.25885416666666666" />
-        <entry key="..\:/Codefield/AndroidStudio/Qingguo/app/src/main/res/layout/view_navigation_bottomtab.xml" value="0.176" />
-        <entry key="..\:/Codefield/AndroidStudio/Qingguo/app/src/main/res/layout/view_news_item.xml" value="0.41825095057034223" />
-        <entry key="..\:/Codefield/AndroidStudio/Qingguo/app/src/main/res/layout/view_titletab.xml" value="0.1574074074074074" />
       </map>
     </option>
   </component>
@@ -78,12 +54,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.176" />
-      </ProjectState>
-    </option>
   </component>
 </project>

@@ -1,4 +1,5 @@
 package com.example.qgapp.Data.GetData;
 
-public class DataAdapter {
+public abstract class DataAdapter<DH extends DataHolder> {
+
 }

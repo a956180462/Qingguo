@@ -10,8 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.qgapp.ActivityDestroy;
+import com.example.qgapp.Data.UserData.loginData;
 import com.example.qgapp.R;
-import com.example.qgapp.Data.loginData;
 import com.example.qgapp.navigation.NavigationActivity;
 import com.xuexiang.xui.widget.button.ButtonView;
 import com.xuexiang.xui.widget.edittext.materialedittext.MaterialEditText;

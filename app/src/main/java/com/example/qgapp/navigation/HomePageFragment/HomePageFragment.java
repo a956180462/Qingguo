@@ -39,7 +39,7 @@ public class HomePageFragment extends Fragment {
         list.add(Qiye);
         list.add(Zhengfu);
         ViewPager homeViewPager = Objects.requireNonNull(g).findViewById(R.id.homepage_Viewpager);
-        FragViewPagerAdapter adapter = new FragViewPagerAdapter(getParentFragmentManager(), list);
+        FragViewPagerAdapter adapter = new FragViewPagerAdapter(getChildFragmentManager(), list);
         homeViewPager.setAdapter(adapter);
         homeViewPager.setTag(tabLayout);
     }
