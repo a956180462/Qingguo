@@ -38,6 +38,7 @@ public class LoginActivity extends AppCompatActivity {
             createLogindate(name, pass);
             Intent intent_Login_toNa = new Intent(LoginActivity.this, NavigationActivity.class);
             startActivity(intent_Login_toNa);
+            finish();
         });
         //注册按钮
         register.setOnClickListener(v -> {
@@ -72,8 +73,6 @@ public class LoginActivity extends AppCompatActivity {
 
     //保存登录状态
     public void createLogindate(String username,String password){
-        loginData.updateUsername(username);
-        loginData.updateUserpass(password);
         loginData.updateLoginstate(true);
     }
 

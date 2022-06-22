@@ -22,8 +22,6 @@ public class NavigationActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
-        ActivityDestroy.destroyActivity("MainActivity");
-        ActivityDestroy.destroyActivity("LoginActivity");
     //----------------------------------------------------------------------
         Button homepage = findViewById(R.id.navigation_button_homepage);
         Button guoyuan = findViewById(R.id.navigation_button_guoyuan);
@@ -74,6 +72,6 @@ public class NavigationActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         //APP Destroy,close the SQL connection
-        new qgSQL().CloseConn();
+        //new qgSQL().CloseConn();
     }
 }

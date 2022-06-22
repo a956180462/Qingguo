@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <UserData>
-        <UserID></UserID>
-        <Account></Account>
-        <PassWord></PassWord>
-        <Phone></Phone>
-    </UserData>
-    <UserLoginData>
-        <LoginState></LoginState>
-        <LoginAddrise></LoginAddrise>
-        <LoginTime></LoginTime>
-    </UserLoginData>
+
+        <string name = "UserID"></string>
+        <string name = "Account"></string>
+        <string name = "Password"></string>
+        <string name = "Phone"></string>
+
+
+        <string name = "LoginState"></string>
+
 </resources>

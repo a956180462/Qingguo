@@ -3,12 +3,11 @@ package com.example.qgapp.Data.GetData;
 import android.app.Activity;
 
 import com.example.qgapp.Data.MySQL.qgSQL;
-import com.example.qgapp.Data.MySQL.qgSqlException;
 
 import java.io.File;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.List;
+import java.util.Map;
 
 public class GetData extends qgSQL implements GetDBData,GetFileData{
     Activity activity = null;
@@ -17,18 +16,15 @@ public class GetData extends qgSQL implements GetDBData,GetFileData{
         activity = a;
     }
     @Override
-    public ResultSet loginData_DB(String key,String pass) {
+    public void loginData_DB(String key,String pass) {
         String sql = "SELECT * FROM USER_DATA WHERE UserID =" + "'"+ key +"'"+
                 "OR Account =" + "'"+ key +"'"+
-                "OR Account =" + "'"+ key +"'"+
+                "OR Phone =" + "'"+ key +"'"+
                 "AND UserPassword =" + "'"+ pass +"'";
-        ResultSet res = null;
-        try {
-            res = statement.executeQuery(sql);
-        } catch (SQLException e) {
-            new qgSqlException("loginData_DB Exception").UserNOTExist(activity);
+        Map<String,Object> data = new qgSQL().CreateResultSet(sql);
+        if(!data.isEmpty()){
+            new DataAdapter(data,"UserData");
         }
-        return res;
     }
 
     @Override

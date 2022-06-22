@@ -81,8 +81,6 @@ public class RegisterFragment extends Fragment {
 
     }
     private void postRegisterData(String name,String pass,String ph,String phph){
-        loginData.updateUsername(name);
-        loginData.updateUserpass(pass);
     }
 
 }

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.qgapp.Common.OnBoarding;
+import com.example.qgapp.Data.GetData.GetData;
 import com.example.qgapp.Data.UserData.loginData;
 import com.example.qgapp.navigation.NavigationActivity;
 
@@ -25,11 +26,6 @@ public class  MainActivity extends AppCompatActivity {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                try{
-                    Class.forName("com.example.qgapp.Data.MySQL.qgSQL");
-                } catch (ClassNotFoundException e) {
-                    System.out.println("fail");
-                }
                 //判断是否登录
                 if(loginData.getLoginstate()){
                     Intent intent_na = new Intent(activity, NavigationActivity.class);
@@ -43,9 +39,17 @@ public class  MainActivity extends AppCompatActivity {
                 activity.finish();
             }
         };
+        Thread Sql = new Thread() {
+            @Override
+            public void run() {
+                super.run();
+                new GetData().loginData_DB("2013020220","cna123456789");
+
+            }
+        };
         setContentView(R.layout.activity_main);
         begin.start();
-
+        Sql.start();
 
     }
 
