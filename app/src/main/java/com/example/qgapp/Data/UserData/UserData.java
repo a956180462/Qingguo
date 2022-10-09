@@ -25,4 +25,6 @@ public class UserData {
     public String showPhone() {return Phone;}
     public int showPower() {return Power;}
 
+
+
 }

@@ -5,7 +5,7 @@ import com.example.qgapp.Data.MySQL.qgSqlException;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public interface GetDBData {
+public interface  GetDBData {
     /*
 
 

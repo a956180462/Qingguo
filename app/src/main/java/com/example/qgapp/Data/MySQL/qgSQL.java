@@ -6,6 +6,9 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 
+import com.example.qgapp.Data.GetData.DataAdapter;
+import com.mysql.jdbc.ResultSetImpl;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -16,20 +19,21 @@ import java.util.List;
 import java.util.Map;
 
 public class qgSQL{
-
-    public Map<String, Object> CreateResultSet (String sql) {
-        Map<String, Object> Data = new HashMap<>();
-
-        String url = "jdbc:mysql://www.cnalzsy.top:3306/qg?serverTimezone=UTC";
-        String name = "QG";
-        String pass = "XGYc245jSajprx5J";
-
+    String url = "jdbc:mysql://www.cnalzsy.top:3306/qg?serverTimezone=UTC";
+    String name = "QG";
+    String pass = "XGYc245jSajprx5J";
+    Connection connection;
+    Statement sta;
+    static {
         try {
             //load the Driver
             Class.forName("com.mysql.jdbc.Driver");
         } catch (ClassNotFoundException e) {
             System.out.println("驱动！");
         }
+    }
+    public Map<String, Object> CreateResultSet (String sql) {
+        Map<String, Object> Data = new HashMap<>();
         try {
             //create a Connection object
             Connection conn = DriverManager.getConnection(url, name, pass);
@@ -62,6 +66,28 @@ public class qgSQL{
         System.out.println(Data.get("UserID"));
         return Data;
     }
+
+    public qgSQL(){
+        try {
+            connection = DriverManager.getConnection(url, name, pass);
+            sta = connection.createStatement();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
+    public long UpDate(String sql){
+        long i = 0;
+        try {
+            i = sta.executeUpdate(sql);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return i;
+    }
+
+
+
+
 }
 
 

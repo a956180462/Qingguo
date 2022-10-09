@@ -4,5 +4,5 @@ import java.io.File;
 import java.util.List;
 
 public interface GetFileData {
-    List<String> loginData_File();
+    void loginData_File();
 }
