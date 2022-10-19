@@ -36,7 +36,7 @@ public class  MainActivity extends AppCompatActivity {
                 new GetData(activity).loginData_File();
                 System.out.println("zhengc2");
                 //判断是否登录
-                if(LoginData.getLoginstate()){
+                if(false){
                     Intent intent_na = new Intent(activity, NavigationActivity.class);
                     startActivity(intent_na);
 

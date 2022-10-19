@@ -1,20 +1,27 @@
 package com.example.qgapp.login;
 
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.qgapp.ActivityDestroy;
-import com.example.qgapp.Data.UserData.loginData;
+import com.example.qgapp.Data.MySQL.qgSQL;
+import com.example.qgapp.Data.UserData.LoginData;
 import com.example.qgapp.R;
 import com.example.qgapp.navigation.NavigationActivity;
 import com.xuexiang.xui.widget.button.ButtonView;
 import com.xuexiang.xui.widget.edittext.materialedittext.MaterialEditText;
+
+import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class LoginActivity extends AppCompatActivity {
@@ -35,10 +42,16 @@ public class LoginActivity extends AppCompatActivity {
         post.setOnClickListener(v -> {
             String name =  username.getEditValue();
             String pass =  password.getEditValue();
-            createLogindate(name, pass);
-            Intent intent_Login_toNa = new Intent(LoginActivity.this, NavigationActivity.class);
-            startActivity(intent_Login_toNa);
-            finish();
+            boolean k = checkLogin(name, pass);
+            if(k){
+                Toast.makeText(this,"登录成功",Toast.LENGTH_SHORT).show();
+                Intent intent_Login_toNa = new Intent(LoginActivity.this, NavigationActivity.class);
+                startActivity(intent_Login_toNa);
+                createLogindate(name, pass);
+                this.finish();
+            }else {
+                Toast.makeText(this,"用户名或密码错误",Toast.LENGTH_SHORT).show();
+            }
         });
         //注册按钮
         register.setOnClickListener(v -> {
@@ -73,7 +86,19 @@ public class LoginActivity extends AppCompatActivity {
 
     //保存登录状态
     public void createLogindate(String username,String password){
-        loginData.updateLoginstate(true);
+        LoginData.updateLoginstate(true);
+    }
+
+    //查验登录10.19
+    boolean checkLogin(String name,String pass){
+        boolean KEY = false;
+        Map<String,Object> user;
+        String SQL = "SELECT * FROM User WHERE (NAME =" + name + " OR ID = " + name
+                + "OR PHONE = "+ name +") and PASSWORD =" + pass;
+        qgSQL sql = new qgSQL();
+        user = sql.CreateResultSet(SQL);
+        KEY = !(user.isEmpty());
+        return KEY;
     }
 
 }

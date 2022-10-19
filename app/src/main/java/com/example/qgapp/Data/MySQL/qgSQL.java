@@ -7,7 +7,7 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 
 import com.example.qgapp.Data.GetData.DataAdapter;
-import com.mysql.jdbc.ResultSetImpl;
+
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -19,9 +19,10 @@ import java.util.List;
 import java.util.Map;
 
 public class qgSQL{
-    String url = "jdbc:mysql://www.cnalzsy.top:3306/qg?serverTimezone=UTC";
-    String name = "QG";
-    String pass = "XGYc245jSajprx5J";
+    static final String url = "jdbc:mysql://qg.ajohn.top:3306/qg?serverTimezone=UTC";
+    static final String name = "qg";
+    static final String pass = "jS2ZGHWYrDHwYekf";
+
     Connection connection;
     Statement sta;
     static {
@@ -32,6 +33,8 @@ public class qgSQL{
             System.out.println("驱动！");
         }
     }
+    //创建结果数据表
+    //返回：Map<String 属性，Object 值>；参数（String SQL语句）
     public Map<String, Object> CreateResultSet (String sql) {
         Map<String, Object> Data = new HashMap<>();
         try {
@@ -42,19 +45,15 @@ public class qgSQL{
             //Do the action of SQL
             ResultSet rs = statement.executeQuery(sql);
             while (rs.next()) {
-                String a = rs.getString("UserID");
-                String b = rs.getString("Account");
-                String c = rs.getString("UserPassword");
-                String d = rs.getString("Email");
-                String e = rs.getString("Phone");
-                int f = rs.getInt("Power");
-                Data.put("UserID", a);
-                Data.put("Account", b);
-                Data.put("UserPassword", c);
-                Data.put("Email", d);
-                Data.put("Phone", e);
-                Data.put("Power", f);
-
+                String name = rs.getString("NAME");
+                System.out.println(name);
+                String pass = rs.getString("PASSWORD");
+                int id = rs.getInt("ID");
+                int phone = rs.getInt("PHONE");
+                Data.put("Name", name);
+                Data.put("UserPassword", pass);
+                Data.put("UserID", id);
+                Data.put("Phone", phone);
             }
             rs.close();
             statement.close();
@@ -63,7 +62,7 @@ public class qgSQL{
             e.printStackTrace();
             System.out.println("Fail");
         }
-        System.out.println(Data.get("UserID"));
+        System.out.println(Data.get("ID"));
         return Data;
     }
 
